@@ -33,13 +33,42 @@ It includes mock API integrations to simulate interactions with external service
 │ ├── most_purchased_clicked_viewed.csv
 ├── requirements.txt
 
-Prerequisites
+#Prerequisites
 Python 3.8 or higher
 Virtual environment tools (venv or virtualenv)
 Steps
 Clone the repository:
 
+#To clone
 
+git clone https://github.com/arunkum54/ecommerce-recommendation--ai-ml-solution.git
+cd ecommerce-recommendation--ai-ml-solution
 
-git clone https://github.com/your-username/ecommerce-ai-ml-solution.git
-cd ecommerce-ai-ml-solution
+#Install the required packages:
+pip install -r requirements.txt
+
+#API Endpoints
+
+Fetch Product Attributes
+Endpoint:
+GET /api/products/<product_id>
+Example:
+GET http://127.0.0.1:5000/api/products/101
+
+Fetch User Interactions
+Endpoint:
+GET /api/users/<user_id>/interactions
+Example:
+GET http://127.0.0.1:5000/api/users/1/interactions
+
+Fetch Content Version
+Endpoint:
+GET /api/content/<version>
+Example:
+GET http://127.0.0.1:5000/api/content/A
+
+Get Recommendations for a User
+Endpoint:
+GET /api/recommendations/<user_id>
+Example:
+GET http://127.0.0.1:5000/api/recommendations/1
